@@ -68,4 +68,4 @@ The samples makefiles can take advantage of certain options:
     $ make SMS="50 60"
     ```
 
-run program by typing `./bin/neuralnet` at the command line in the main directory. The program assumes the folder structure of this project and will read the .jpg files from the img folder, do the computations and save the modified images to the std_img folder.
+run program by typing `./bin/neuralnet` at the command line in the main directory. The program assumes the folder structure of this project and will read the mnist files from the mnist folder, do the computations.
