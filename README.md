@@ -9,6 +9,13 @@ for the layers, Relu and TanH, that are selectable from the command line. The co
 also implements a Loss function, cross entropy, to allow the tuning of the weights
 and biases.
 
+The MNIST directory contains four files - The training set of images, the training
+set of labels for the corresponding images, the test set of images amnd labels for
+performing performance analysis of the model.
+
+The MNIST dataset is not in a regular image file format. I am using a program from
+Henry Tan and Aadyot Bhatngarm to read the MNIST dataset - `MNISTParser.hpp`.
+
 The log file shows the output of running the program on the MNIST dataset found in
 mnist directory.
 
