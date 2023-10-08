@@ -7,7 +7,18 @@ Dense, Conv2D, POOL2D, and SoftMax layers to demonstarte a neural network to
 classify MNIST images of digits. The code also implements two different activations
 for the layers, Relu and TanH, that are selectable from the command line. The code
 also implements a Loss function, cross entropy, to allow the tuning of the weights
-and biases.
+and biases. `model.hpp` and `model.cpp` are used to implement a simple linear nueralnet. 
+To add a `Layer`, a user should call the `add()` method of the `Model` and supply as 
+arguments a string indicating the type of layer desired, and an array or vector of 
+integers that specify parameters relevant to the `Layer`. Note that the shape of a 
+single input minibatch must be given to the Model's constructor as NCHW.
+
+Once a Model is constructed, a user can call the Model's `train()` method with a set 
+of training data of the specified input shape, a set of corresponding labels with the 
+specified output shape, the number of training examples being used, and the desired 
+mini-batch size. Similar functions exist to return the Model's predictions -` predict()` 
+on a test set and to evaluate the Model's performance on a test set, given a set of 
+ground truth labels - `evaluate()`.
 
 The MNIST directory contains four files - The training set of images, the training
 set of labels for the corresponding images, the test set of images amnd labels for
